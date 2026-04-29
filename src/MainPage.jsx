@@ -6,9 +6,9 @@ const MainPage = () => {
   useEffect(() => {
     const fetchMovies = async () => {
       try {
-        const res = await fetch("http://localhost:3001/movies");
+        const res = await fetch(`${import.meta.env.BASE_URL}db.json`);
         const data = await res.json();
-        setMovies(data);
+        setMovies(data.movies);
       } catch (error) {
         console.error(error);
       }
