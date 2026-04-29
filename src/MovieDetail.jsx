@@ -42,7 +42,7 @@ const MovieDetail = () => {
         <div className="poster-wrap">
           <img
             className="poster-image"
-            src={movie.poster_image_url}
+            src={`${import.meta.env.BASE_URL}${movie.poster_image_url}`}
             alt={`${movie.title} 포스터`}
           />
         </div>

@@ -29,7 +29,7 @@ const MainPage = () => {
             <Link to={`/movies/${movie.id}`} className="movie-card-link">
               <img
                 className="poster-thumb"
-                src={movie.poster_image_url}
+                src={`${import.meta.env.BASE_URL}${movie.poster_image_url}`}
                 alt={`${movie.title} 포스터`}
                 loading="lazy"
               />
